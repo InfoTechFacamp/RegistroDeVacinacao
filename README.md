@@ -16,9 +16,9 @@
 
 > O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados mongoDB.
 
-### 🏠 [Homepage](https://github.com/InfoTechFacamp/RegistroDeVacinacao)
+### 🏠 [Página inicial](https://github.com/InfoTechFacamp/RegistroDeVacinacao)
 
-## Prerequisites
+## Pré-requisitos
 
 - npm >=5.5.0
 - node >=9.3.0
@@ -26,31 +26,31 @@
 ## Install
 
 ```sh
+npm install
+```
+
+## Iniciar o app
+
+```sh
 npm start
 ```
 
-## Run tests
-
-```sh
-npm run test
-```
-
-## Author
+## Autor
 
 👤 **Info Tech**
 
 * Website: https://infotechfacamp.github.io/
 * Github: [@InfoTechFacamp](https://github.com/InfoTechFacamp)
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/InfoTechFacamp/RegistroDeVacinacao/issues). You can also take a look at the [contributing guide](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
+Contribuições, questões e pedidos de recursos são bem-vindos!<br />Sinta-se livre para ver a [página de problemas](https://github.com/InfoTechFacamp/RegistroDeVacinacao/issues). Você também pode dar uma olhada no [guia de contribuição](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
 
-## Show your support
+## Mostre o seu apoio
 
-Give a ⭐️ if this project helped you!
+Dê um ⭐️ se este projeto te ajudou!
 
-## 📝 License
+## 📝 Licença
 
 Copyright © 2021 [Info Tech](https://github.com/InfoTechFacamp).<br />
-This project is [MIT](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE) licensed.
+Este projeto está sobre a licença [MIT](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE).
