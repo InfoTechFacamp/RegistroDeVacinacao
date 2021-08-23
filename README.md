@@ -35,7 +35,7 @@ npm install
 npm start
 ```
 
-## Author
+## Autor
 
 👤 **Info Tech**
 
