@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Registro de Vacinação 👋</h1>
+<h1 align="center">Registro de Vacinação 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
@@ -54,6 +54,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [Info Tech](https://github.com/InfoTechFacamp).<br />
 This project is [MIT](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
