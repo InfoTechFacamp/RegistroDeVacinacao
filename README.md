@@ -54,3 +54,6 @@ Dê um ⭐️ se este projeto te ajudou!
 
 Copyright © 2021 [Info Tech](https://github.com/InfoTechFacamp).<br />
 Este projeto está sobre a licença [MIT](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE).
+
+
+@FACAMP
