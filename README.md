@@ -44,7 +44,7 @@ npm start
 
 ## 🤝 Contribuir
 
-Contribuições, questões e pedidos de recursos são bem-vindos!<br />Sinta-se livre para ver a [página de problemas](https://github.com/InfoTechFacamp/RegistroDeVacinacao/issues). Você também pode dar uma olhada no [guia de contribuição](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
+Contribuições, questões e pedidos de recursos são bem-vindos!<br />Sinta-se livre para ver a [página de problemas](https://github.com/InfoTechFacamp/RegistroDeVacinacao/issues). Você também pode dar uma olhada no [guia de contribuição](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/CONTRIBUTING.md).
 
 ## Mostre o seu apoio
 
