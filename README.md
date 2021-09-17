@@ -1,4 +1,4 @@
-<h1 align="center">Registro de Vacinação 👋</h1>
+<h1 align="center">Registro de Vacinação 💉</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/npm-%3E%3D6.14.11-blue.svg" />
