@@ -14,7 +14,7 @@
   </a>
 </p>
 
-> O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados mongoDB.
+> O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados MongoDB.
 
 ### 🏠 [Página inicial](https://github.com/InfoTechFacamp/RegistroDeVacinacao)
 
