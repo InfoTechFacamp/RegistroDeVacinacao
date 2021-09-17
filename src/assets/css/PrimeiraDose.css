@@ -1,0 +1,4 @@
+form .input-box {
+  width: calc(100% / 2 - 20px);
+}
+
