@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/login-form---Ambrodu-1.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/login-form---Ambrodu.css">
     <link rel="stylesheet" href="assets/css/PrimeiraDose.css">
 </head>
 
 <body style="font-family: Lato, sans-serif;display: flex;background: transparent;color: rgb(0,0,0);">
-    <div class="container" style="max-width: 700px;width: 100%;border-radius: 5px;">
-        <div style="padding: 10px;border-radius: 5px;border: 1px solid rgb(255,255,255);margin: 10px;background: linear-gradient(145deg, rgba(255,255,255,0), rgba(255,255,255,0.31) 100%);">
+    <div class="container d-xxl-flex" style="max-width: 700px;width: 100%;border-radius: 5px;">
+        <div class="d-xxl-flex" style="padding: 10px;border-radius: 5px;border: 1px solid rgb(255,255,255);margin: 10px;background: linear-gradient(145deg, rgba(255,255,255,0), rgba(255,255,255,0.31) 100%);">
             <div style="margin: 30px;font-family: Righteous, serif;">
                 <h1 style="font-family: Lato, sans-serif;font-weight: 500;position: relative;">Primeira dose</h1>
                 <div>
-                    <form class="flex-column justify-content-center align-items-center align-content-center flex-wrap" style="display: flex;">
-                        <div class="d-block dados-paciente"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" placeholder="Digite o nome do paciente" name="nome" inputmode="latin-name" required="" minlength="5" title="Digite seu nome" style="font-family: Allerta, sans-serif;">
+                    <form class="flex-column justify-content-center flex-wrap" style="display: flex;">
+                        <div class="dados-paciente"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="nome-paciente" placeholder="Digite o nome do paciente" name="nome" inputmode="latin-name" required="" minlength="5" title="Digite o nome do paciente" style="font-family: Allerta, sans-serif;">
                             <div>
-                                <p>Sexo</p><input type="radio" name="sexo" required=""><label class="form-label">Masculino</label><input type="radio" name="sexo" required=""><label class="form-label">Feminino</label>
+                                <div class="d-flex flex-column">
+                                    <p>Sexo</p>
+                                    <div>
+                                        <div class="d-xxl-flex"><input type="radio" data-bs-toggle="tooltip" data-bss-tooltip="" name="sexo" required="" title="Sexo do paciente"><label class="form-label" style="margin-left: 6px;">Masculino</label></div>
+                                        <div><input type="radio" data-bs-toggle="tooltip" data-bss-tooltip="" name="sexo" required="" title="Sexo do paciente"><label class="form-label" style="margin-left: 6px;">Feminino</label></div>
+                                    </div>
+                                </div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-22" disabled=""><label class="form-check-label" data-bs-toggle="tooltip" data-bss-tooltip="" for="formCheck-22" title="Estado da paciente">Paciente está amamentando ou gestando?</label></div>
                             </div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-22" disabled=""><label class="form-check-label" data-bs-toggle="tooltip" data-bss-tooltip="" for="formCheck-22" title="Estado da paciente">Paciente está amamentando ou gestando?</label></div><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" required="" title="Digite a sua idade" placeholder="Idade" name="idade" inputmode="numeric" minlength="0" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" name="telefone" placeholder="Telefone" inputmode="tel" required="" title="Telefone do paciente" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" placeholder="CPF" name="cpf" required="" minlength="11" maxlength="11" inputmode="numeric" title="Digite seu CPF" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" name="endereco" placeholder="Endereço" required="" title="endereço do paciente" style="font-family: Allerta, sans-serif;">
+                            <div><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="idade" required="" title="Digite a sua idade" placeholder="Idade" name="idade" inputmode="numeric" minlength="0" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="telefone" name="telefone" placeholder="Telefone" inputmode="tel" required="" title="Telefone do paciente" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="cpf-p" placeholder="CPF" name="cpf" required="" minlength="11" maxlength="11" inputmode="numeric" title="Digite seu CPF" style="font-family: Allerta, sans-serif;"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="endereco" name="endereco" placeholder="Endereço" required="" title="endereço do paciente" style="font-family: Allerta, sans-serif;"></div>
                         </div>
                         <div class="sintomas">
                             <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-1" title="Marque se você apresentou sintomas"><label class="form-check-label" for="formCheck-1">Nos últimos 14 (quatorze) dias teve febre (&gt; 37,8 °C) ou sintomas que sugerem infecção respiratória (tosse, falta de ar, dificuldade de respirar), coriza, dor de garganta, perda ou diminuição do olfato, alteração do paladar, diarreia?</label></div>
@@ -41,7 +48,9 @@
                         </div>
                         <div class="caso-suspeito">
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-10"><label class="form-check-label" for="formCheck-10">Nos últimos 14 (quatorze) dias teve contato com um caso suspeito ou confirmado de covid-19?<br></label></div>
-                            <p>A pessoa realizou isolamento social?</p><input type="checkbox"><label class="form-label">Sim</label><input class="form-control form-control-sm invisible" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" title="Numero de dias que a pessoa praticou o isolamento social" placeholder="Por quantos dias?" name="dias-de-isolameto" inputmode="numeric" required="" disabled="" style="font-family: Allerta, sans-serif;"><input type="checkbox"><label class="form-label">Não</label>
+                            <p>A pessoa realizou isolamento social?</p>
+                            <div class="form-check"><input class="form-check-input" type="radio" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-23" title="Marque se o paciente realizou distanciamento social" required="" name="isolamento"><label class="form-check-label" for="formCheck-23">Sim</label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-24" name="isolamento" required="" title="Marque se o paciente não realizou distanciamento social"><label class="form-check-label" for="formCheck-24">Não</label></div><input class="form-control form-control-sm" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="quantos-dias" title="Numero de dias que a pessoa praticou o isolamento social" placeholder="Por quantos dias?" name="dias-de-isolameto" inputmode="numeric" required="" disabled="" style="font-family: Allerta, sans-serif;">
                         </div>
                         <div class="area-de-risco">
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-11"><label class="form-check-label" for="formCheck-11">Trabalha em serviço de saúde hospitalar, laboratorial ou domiciliar?</label></div>
@@ -50,16 +59,16 @@
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-12"><label class="form-check-label" for="formCheck-12">Teve contato com alguém que tem ou teve covid-19 comprovado em sua residência ou trabalho?</label></div>
                         </div>
                         <div class="sintomas-sugestivos">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13"><label class="form-check-label" for="formCheck-13">Teve sintomas sugestivos de covid-19?</label></div><input class="form-control form-control-sm invisible" data-bs-toggle="tooltip" data-bss-tooltip="" type="date" name="data-de-inicio" required="" title="Data de início dos sintomas sugestidos de COVID-19" disabled="" style="font-family: Allerta, sans-serif;">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13"><label class="form-check-label" for="formCheck-13">Teve sintomas sugestivos de covid-19?</label></div><input class="form-control form-control-sm" data-bs-toggle="tooltip" data-bss-tooltip="" id="data" type="date" name="data-de-inicio" title="Data de início dos sintomas sugestidos de COVID-19" disabled="" style="font-family: Allerta, sans-serif;">
                         </div>
                         <div class="realizou-exames">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14"><label class="form-check-label" for="formCheck-14">Realizou algum teste para pesquisa de covid-19?</label></div><select class="form-select form-select-sm invisible" data-bs-toggle="tooltip" data-bss-tooltip="" name="tipo-de-exame" title="Tipo de teste de COVID-19" required="" disabled="" style="font-family: Allerta, sans-serif;">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14"><label class="form-check-label" for="formCheck-14">Realizou algum teste para pesquisa de covid-19?</label></div><select class="form-select form-select-sm" data-bs-toggle="tooltip" data-bss-tooltip="" id="teste-rapido" name="tipo-de-exame" title="Tipo de teste de COVID-19" style="font-family: Allerta, sans-serif;" disabled="">
                                 <option value="RT-PCR">RT-PCR</option>
                                 <option value="POCT-PCR">POCT-PCR</option>
                                 <option value="CRISPR">CRISPR</option>
                                 <option value="sorologia">Sorologia</option>
                                 <option value="teste-rapido" selected="">Testes rápidos</option>
-                            </select><select class="form-select form-select-sm invisible" name="resultado-exame" required="" disabled="" style="font-family: Allerta, sans-serif;">
+                            </select><select class="form-select form-select-sm" id="resultado-exame" name="resultado-exame" style="font-family: Allerta, sans-serif;" disabled="">
                                 <option value="true">Positivo</option>
                                 <option value="False" selected="">Negativo</option>
                             </select>
@@ -73,18 +82,18 @@
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18"><label class="form-check-label" for="formCheck-18">IRC Dialítica</label></div>
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19"><label class="form-check-label" for="formCheck-19">IRC <strong>NÃO</strong>&nbsp; Dialítica</label></div>
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20"><label class="form-check-label" for="formCheck-20">PNEUMOPATIA</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21"><label class="form-check-label" for="formCheck-21">OBESIDADE</label></div><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" name="outra-comorbidade" placeholder="Outro" autofocus="" required="" title="Outra comorbidade não listada" style="font-family: Allerta, sans-serif;">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21"><label class="form-check-label" for="formCheck-21">OBESIDADE</label></div><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="outra-comorbidade" name="outra-comorbidade" placeholder="Outro" autofocus="" title="Outra comorbidade não listada" style="font-family: Allerta, sans-serif;margin-bottom: 10px;">
                         </div>
-                        <div class="d-flex flex-column align-items-center align-content-center temperatura"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" name="temperatura" placeholder="Temperatura em °C" required="" autofocus="" inputmode="numeric" minlength="0" title="Temperatura do paciente" style="font-family: Allerta, sans-serif;">
-                            <p>Vacina aplicada</p><select class="form-select">
+                        <div class="d-flex flex-column align-items-center align-content-center temperatura"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="temperatura" name="temperatura" placeholder="Temperatura em °C" required="" autofocus="" inputmode="numeric" minlength="0" title="Temperatura do paciente" style="font-family: Allerta, sans-serif;">
+                            <p>Vacina aplicada</p><select class="form-select" id="vacina-aplicada">
                                 <option value="coronavac" selected="">CoronaVac</option>
                                 <option value="astrazeneca">AstraZeneca</option>
                                 <option value="pfizer">Pfizer</option>
                                 <option value="sputnik">Sputnik V</option>
                                 <option value="janssen">Janssen</option>
                                 <option value="covaxin">Covaxin</option>
-                            </select><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" name="lote" placeholder="Lote da Vacina" required="" minlength="4" maxlength="4" title="Lote da vacina informada pelo fabricante"><button class="btn btn-primary" data-bs-toggle="tooltip" data-bss-tooltip="" type="submit" title="Enviar formulário da vacina" style="margin-top: 30px;">Enviar</button>
-                        </div><a class="btn btn-primary" role="button" style="margin-top: 30px;color: var(--bs-white);background: var(--bs-red);" href="index.html">Voltar</a>
+                            </select><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="lote-vacina" name="lote" placeholder="Lote da Vacina" required="" minlength="4" maxlength="4" title="Lote da vacina informada pelo fabricante"><button class="btn btn-primary" data-bs-toggle="tooltip" data-bss-tooltip="" type="submit" title="Enviar formulário da vacina" style="margin-top: 30px;">Enviar</button><a class="btn btn-primary" role="button" style="margin-top: 30px;color: var(--bs-white);background: var(--bs-red);" href="index.html">Voltar</a>
+                        </div>
                     </form>
                 </div>
             </div>
