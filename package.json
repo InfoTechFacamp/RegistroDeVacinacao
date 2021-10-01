@@ -1,15 +1,17 @@
 {
   "name": "registrodevacinacao",
   "productName": "registrodevacinacao",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "0.1.2",
+  "description": "O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados MongoDB.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "teste": "electron-builder --win",
+    "publish-git": "electron-builder --win --publish always"
   },
   "keywords": [],
   "author": {
@@ -17,6 +19,26 @@
     "email": "heitorstein@gmail.com"
   },
   "license": "MIT",
+  "build": {
+    "appId": "com.infotech.rdc",
+    "productName": "Registro de vacinação",
+    "copyright": "Copyright © 2021 InfoTech",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "InfoTechFacamp",
+        "repo": "RegistroDeVacinacao"
+      }
+    ],
+    "win": {
+      "asar": true,
+      "target": "nsis",
+      "icon": "src/logo.ico",
+      "publish": [
+        "github"
+      ]
+    }
+  },
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -45,7 +67,13 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-alert": "^0.1.18",
+    "electron-log": "^4.4.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.0.1",
+    "mongodb": "^4.1.2",
+    "quickmongo": "^4.0.0",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.59",
@@ -53,6 +81,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.59",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
     "@electron-forge/maker-zip": "^6.0.0-beta.59",
-    "electron": "13.2.1"
+    "electron": "13.2.1",
+    "electron-builder": "^22.11.7"
   }
 }

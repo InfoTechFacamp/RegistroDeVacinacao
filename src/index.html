@@ -16,7 +16,7 @@
 
 <body>
     <section class="highlight-clean">
-        <div class="container"><a class="btn btn-primary" role="button" style="background: var(--bs-red);" href="config.html"><i class="fa fa-cog"></i></a>
+        <div class="container"><button class="btn btn-primary" id="botaoconfig" type="button" style="background: var(--bs-red);"><i class="fa fa-cog"></i></button>
             <div class="intro">
                 <h2 class="text-center" style="font-size: 163px;color: rgb(49, 52, 55);">INFO TECH</h2>
                 <p class="text-center" style="font-size: 45px;">Seja bem vindo ao registro de vacinação!<br>Por favor escolha a opção desejada:</p>
@@ -27,39 +27,5 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
 </body>
-
-<div id="notification" class="hidden">
-    <p id="message"></p>
-    <button id="close-button" onClick="closeNotification()">
-      Fechar
-    </button>
-    <button id="restart-button" onClick="restartApp()" class="hidden">
-      Reiniciar
-    </button>
-</div>
-
-<script>
-    const { ipcRenderer } = require('electron');
-    const notification = document.getElementById('notification');
-    const message = document.getElementById('message');
-    const restartButton = document.getElementById('restart-button');
-    ipcRenderer.on('update_available', () => {
-    ipcRenderer.removeAllListeners('update_available');
-    message.innerText = 'Uma nova atualização está disponível. Baixando agora...';
-    notification.classList.remove('hidden');
-    });
-    ipcRenderer.on('update_downloaded', () => {
-    ipcRenderer.removeAllListeners('update_downloaded');
-    message.innerText = 'Atualização baixada. Ela será instalada no reinício. Reiniciar agora?';
-    restartButton.classList.remove('hidden');
-    notification.classList.remove('hidden');
-    });
-    function closeNotification() {
-    notification.classList.add('hidden');
-    }
-    function restartApp() {
-    ipcRenderer.send('restart_app');
-    }
-</script>
 
 </html>
