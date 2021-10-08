@@ -5,7 +5,6 @@ const Store = require('electron-store');
 const { Collection: MongoCollection, MongoClient } = require("mongodb");
 const { Collection, Fields } = require("quickmongo");
 const {autoUpdater} = require('electron-updater');
-const { result } = require('lodash');
 const cepAPI = require('cep-promise');
 const { isCpf } = require('iscpf')
 
