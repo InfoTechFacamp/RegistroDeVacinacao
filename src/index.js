@@ -163,7 +163,7 @@ function primeiraDoseWindow () {
     preload:path.join(__dirname, 'PrimeiraDose.js')
   }
  })
- windowPrimeiraDose.webContents.openDevTools();
+ //windowPrimeiraDose.webContents.openDevTools();
  windowPrimeiraDose.setMenu(null);
  windowPrimeiraDose.loadFile(path.join(__dirname, 'PrimeiraDose.html'))
 }
@@ -196,7 +196,7 @@ function consultaWindow () {
  })
 
  windowconsulta.setMenu(null);
- windowconsulta.webContents.openDevTools();
+ //windowconsulta.webContents.openDevTools();
  windowconsulta.loadFile(path.join(__dirname, 'consulta.html'))
 }
 
