@@ -2,3 +2,36 @@ form .input-box {
   width: calc(100% / 2 - 20px);
 }
 
+.espaco {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-select {
+  margin-bottom: 10px;
+}
+
+#gestando {
+  display: none;
+}
+
+#quaissintomas {
+  display: none;
+}
+
+#realisouisolamentosocial {
+  display: none;
+}
+
+#data {
+  display: none;
+}
+
+#testerapidodisplay {
+  display: none;
+}
+

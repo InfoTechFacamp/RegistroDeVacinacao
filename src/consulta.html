@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>PIEF</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/consulta.css">
+</head>
+
+<body style="background: linear-gradient(145deg, var(--bs-indigo), var(--bs-pink));">
+    <div style="margin: 20%;border-color: var(--bs-white);color: var(--bs-white);">
+        <form>
+            <h1>Registro de segunda dose</h1>
+            <div class="input-group"><span class="input-group-text">Nome</span><input class="form-control" type="text" id="nome" disabled=""></div>
+            <div class="input-group"><span class="input-group-text">Sexo</span><input class="form-control" type="text" id="sexo" disabled=""></div>
+            <p id="pacientegestando">Paciente está gestando:</p>
+            <div class="input-group"><span class="input-group-text">Idade</span><input class="form-control" type="text" id="idade" disabled=""></div>
+            <div class="input-group"><span class="input-group-text">Telefone</span><input class="form-control" type="text" id="telefone" disabled=""></div>
+            <div class="input-group"><span class="input-group-text">CPF</span><input class="form-control" type="text" id="cpf" disabled=""></div>
+            <div class="input-group"><span class="input-group-text">CEP</span><input class="form-control" type="text" id="cep" disabled=""></div>
+            <p id="endereco">Endereço:&nbsp;</p>
+            <p id="sintomas">Apresentou sintomas:&nbsp;</p>
+            <p id="suspeita">Teve contado com pessoa com suspeita de COVID-19:&nbsp;</p>
+            <p id="isolamento">Realizou isolamento:&nbsp;</p>
+            <p id="areaderisco">Trabalha em área de risco:&nbsp;</p>
+            <p id="contato">Teve contato com pessoa portando COVID-19 em seu trabalho ou em sua residência:&nbsp;</p>
+            <p id="sintomas-sugestivos">Teve sintomas sugestivos da COVID-19:&nbsp;</p>
+            <p id="teste">Realizou teste para COVID-19:&nbsp;</p>
+            <p id="comorbidades">Apresenta comorbidades:&nbsp;</p>
+            <div class="input-group"><span class="input-group-text">Temperatura na primeira dose</span><input class="form-control" type="text" id="temperatura1" disabled=""></div>
+            <div class="input-group"><span class="input-group-text">Temperatura na segunda dose</span><input class="form-control" type="text" id="temperatura2" required="" minlength="1" maxlength="2"></div>
+            <div class="input-group"><span class="input-group-text">Primeira dose</span><input class="form-control" type="text" id="vacina-primeiradose" disabled=""></div>
+            <p>Segunda dose:</p><select class="form-select form-select" id="vacina-aplicada" style="margin-bottom: 10px;">
+                <option value="CoronaVac" selected="">CoronaVac</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+                <option value="Pfizer">Pfizer</option>
+                <option value="Sputnik">Sputnik V</option>
+                <option value="Janssen">Janssen</option>
+                <option value="Covaxin">Covaxin</option>
+            </select><input class="form-control form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="lote-vacina" name="lote" placeholder="Lote da Vacina" required="" minlength="4" maxlength="4" title="Lote da vacina informada pelo fabricante" pattern="[0-9]+" style="margin-bottom: 10px;">
+            <div class="d-lg-flex justify-content-lg-center align-items-lg-center"><button class="btn btn-success" id="enviar" type="submit" style="background: rgb(37,184,116);">Salvar segunda dose</button></div>
+            <p class="text-center">A data da segunda dose será salva automaticamente.<br>Após confirmação basta fechar esta janela.</p>
+        </form>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 {
   "name": "registrodevacinacao",
   "productName": "registrodevacinacao",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados MongoDB.",
   "main": "src/index.js",
   "scripts": {
@@ -67,10 +67,13 @@
     }
   },
   "dependencies": {
+    "cep-promise": "^4.1.1",
     "electron-alert": "^0.1.18",
     "electron-log": "^4.4.1",
     "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^8.0.1",
+    "electron-updater": "^4.3.9",
+    "iscpf": "^2.0.0",
     "mongodb": "^4.1.2",
     "quickmongo": "^4.0.0",
     "update-electron-app": "^2.0.1"
