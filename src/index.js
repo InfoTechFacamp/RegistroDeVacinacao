@@ -12,27 +12,24 @@ autoUpdater.logger = require("electron-log");
 autoUpdater.logger.transports.file.level = "info";
 
 autoUpdater.on('update-downloaded', () => {
-  console.log('Atualização baixada');
+console.log('Atualização baixada');
 
-  if (process.env.NODE_ENV === 'production') { 
-    dialog.showMessageBox({
-      type: 'info',
-      title: 'Update encontrada',
-      message: 'Atualizações encontradas, você quer atualização agora?',
-      buttons: ['Sim', 'Não']
-    }, (buttonIndex) => {
-      if (buttonIndex === 0) {
-        const isSilent = true;
-        const isForceRunAfter = true; 
-        autoUpdater.quitAndInstall(isSilent, isForceRunAfter); 
-      } 
-      else {
-        updater.enabled = true
-        updater = null
-      }
-    })
-  }
-  
+  dialog.showMessageBox({
+    type: 'info',
+    title: 'Update encontrada',
+    message: 'Atualizações encontradas, você quer atualização agora?',
+    buttons: ['Sim', 'Não']
+  }, (buttonIndex) => {
+    if (buttonIndex === 0) {
+      const isSilent = true;
+      const isForceRunAfter = true; 
+      autoUpdater.quitAndInstall(isSilent, isForceRunAfter); 
+    } 
+    else {
+      updater.enabled = true
+      updater = null
+    }
+  })
 })
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -81,7 +78,7 @@ let alert = new Alert();
 
 //const mongo = new MongoClient(store.get('MongoURI'), "mongodb://localhost");
 app.on("ready", () => {
-  if (process.env.NODE_ENV === 'production') { autoUpdater.checkForUpdates() }
+  autoUpdater.checkForUpdatesAndNotify();
   //store.set('MongoURI', "Uma Url Aq");
   //store.delete('MongoURI');
   try {
