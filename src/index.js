@@ -148,6 +148,9 @@ function loginWindow () {
     preload:path.join(__dirname, 'config.js')
   }
  })
+ configcheck.on('closed', () => {
+  showMain(true);
+});
  configcheck.setMenu(null);
  configcheck.loadFile(path.join(__dirname, 'config.html'))
 }
@@ -163,6 +166,9 @@ function primeiraDoseWindow () {
     preload:path.join(__dirname, 'PrimeiraDose.js')
   }
  })
+  windowPrimeiraDose.on('closed', () => {
+  showMain(true);
+  });
  //windowPrimeiraDose.webContents.openDevTools();
  windowPrimeiraDose.setMenu(null);
  windowPrimeiraDose.loadFile(path.join(__dirname, 'PrimeiraDose.html'))
@@ -179,6 +185,9 @@ function segundaDoseWindow () {
     preload:path.join(__dirname, 'SegundaDose.js')
   }
  })
+  windowSegundaDose.on('closed', () => {
+  showMain(true);
+  });
  windowSegundaDose.setMenu(null);
  windowSegundaDose.loadFile(path.join(__dirname, 'SegundaDose.html'))
 }
@@ -194,7 +203,9 @@ function consultaWindow () {
     preload:path.join(__dirname, 'consulta.js')
   }
  })
-
+  windowconsulta.on('closed', () => {
+  showMain(true);
+  });
  windowconsulta.setMenu(null);
  //windowconsulta.webContents.openDevTools();
  windowconsulta.loadFile(path.join(__dirname, 'consulta.html'))
