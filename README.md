@@ -9,10 +9,8 @@
   <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/InfoTechFacamp/Registro de Vacinação" />
-  </a>
 </p>
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/InfoTechFacamp/RegistroDeVacinacao/blob/main/LICENSE) 
 
 > O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados MongoDB.
 
