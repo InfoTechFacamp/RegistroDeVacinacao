@@ -403,7 +403,6 @@ ipcMain.handle("setPaciente", (event, obj) => {
   }
   mongo = new MongoClient(store.get("MongoURI"));
   mongo.connect().then(() => {
-    console.log("Connected to the database!");
     Mongodatabase(obj);
   });
   
@@ -443,7 +442,6 @@ ipcMain.handle("setSegundaDose", (event, obj) => {
   }
   mongo = new MongoClient(store.get("MongoURI"));
   mongo.connect().then(() => {
-    console.log("Connected to the database!");
     Mongodatabase2(obj);
   });
   
@@ -485,7 +483,7 @@ function Mongodatabase (obj) {
     temperatura1: Number(obj.temperatura1),
     vacinaAplicada1: obj.vacinaAplicada1,
     loteVacina1: Number(obj.loteVacina1),
-    temperatura2 : Number(obj.temperatura2),
+    temperatura2: Number(obj.temperatura2),
     vacinaAplicada2: obj.vacinaAplicada2,
     loteVacina2: Number(obj.loteVacina2),
     dataVacina1: obj.dataVacina1,
@@ -496,12 +494,6 @@ function Mongodatabase (obj) {
 function Mongodatabase2(obj) {
   const mongoCollection = mongo.db().collection("JSON");
   const db = new Collection(mongoCollection, schema);
-  /*db.set(cpfProcura, {
-    temperatura2 : obj.temperatura2,
-    vacinaAplicada2: obj.vacinaAplicada2,
-    loteVacina2: obj.loteVacina2,
-    dataVacina2: obj.dataVacina2
-  })*/
   db.set(cpfProcura, obj.temperatura2, "temperatura2")
   db.set(cpfProcura, obj.vacinaAplicada2, "vacinaAplicada2")
   db.set(cpfProcura, obj.loteVacina2, "loteVacina2")
