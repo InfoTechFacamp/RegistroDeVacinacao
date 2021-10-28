@@ -1,10 +1,6 @@
 <h1 align="center">Registro de Vacinação 💉</h1>
 <p>
-<<<<<<< HEAD
   <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
-=======
-  <img alt="Version" src="https://img.shields.io/badge/version-1.1.5-blue.svg?cacheSeconds=2592000" />
->>>>>>> 81e82301ca4a40931787a806122ca5fd7cb692fa
   <img src="https://img.shields.io/badge/npm-%3E%3D6.14.11-blue.svg" />
   <img src="https://img.shields.io/badge/node-%3E%3D14.16.0-blue.svg" />
   <a href="https://github.com/InfoTechFacamp/RegistroDeVacinacao#readme" target="_blank">
