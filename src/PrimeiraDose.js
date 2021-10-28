@@ -3,7 +3,7 @@ const { ipcRenderer } = require('electron')
 let nomePac
 let sexoPac
 let gestPac
-let idadePac
+let datadenacimento
 let telefonePac
 let cpfPac
 let cepPac
@@ -46,7 +46,7 @@ window.onload = function() {
         if (document.getElementById('sexFem').checked === true && document.getElementById('formCheck-22').checked === true){
             gestPac = true
         }
-        idadePac = document.getElementById("idade").value
+        datadenacimento = document.getElementById("datadenacimento").value
         telefonePac = document.getElementById("telefone").value
         cpfPac = document.getElementById("cpf-p").value
         cepPac = document.getElementById("cep").value
@@ -98,7 +98,7 @@ window.onload = function() {
             nome: nomePac,
             sexo: sexoPac,
             gestante: gestPac || false,
-            idade: idadePac,
+            dataDeNascimento: datadenacimento,
             telefone: telefonePac,
             cpf: cpfPac,
             cep: cepPac,
@@ -137,12 +137,8 @@ function checkValid() {
         ipcRenderer.invoke("monstrarErro", "Marque o sexo do paciente!")
         return false;
     }
-    if(document.getElementById("idade").value == "") {
-        ipcRenderer.invoke("monstrarErro", "Digite uma idade válida!")
-        return false;
-    }
-    if(isNaN(parseInt(document.getElementById("idade").value))) {
-        ipcRenderer.invoke("monstrarErro", "Digite uma idade válida!")
+    if(document.getElementById("datadenacimento").value == "") {
+        ipcRenderer.invoke("monstrarErro", "Digite uma data de nascimento válida!")
         return false;
     }
     if(document.getElementById("telefone").value == "") {

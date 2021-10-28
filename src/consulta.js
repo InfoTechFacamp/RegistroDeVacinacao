@@ -10,7 +10,7 @@ window.onload = async function() {
         document.getElementById("pacientegestando").style.display = "block";
         document.getElementById("pacientegestando").innerHTML = document.getElementById("pacientegestando").innerHTML + " <b>Sim.</b>"
     }  
-    document.getElementById("idade").value = paciente.idade
+    document.getElementById("datadenascimento").value = `${paciente.dataDeNascimento.slice(8,10)}/${paciente.dataDeNascimento.slice(5,7)}/${paciente.dataDeNascimento.slice(0,4)}`
     document.getElementById("telefone").value = paciente.telefone
     document.getElementById("cpf").value = await ipcRenderer.invoke("cpfPaciente");
     document.getElementById("cep").value = paciente.cep
@@ -19,10 +19,14 @@ window.onload = async function() {
     document.getElementById("endereco").innerHTML = document.getElementById("endereco").innerHTML + ` <b>${endereco}.</b>`
     let sintomas = ""
     if(paciente.sintomasCheck === true) {
-        paciente.sintomas.forEach(sintoma => {
-        sintomas = sintomas + `${sintoma}, `
-    });
-        document.getElementById("sintomas").innerHTML = document.getElementById("sintomas").innerHTML + ` <b>Sim, ${sintomas}.</b>`
+        for (let index = 0; index < paciente.sintomas.length; index++) {
+            if(paciente.sintomas.length - 1 === index) {
+                sintomas = sintomas + `${paciente.sintomas[index]}.`
+            } else {
+                sintomas = sintomas + `${paciente.sintomas[index]}, `
+            }
+        }
+        document.getElementById("sintomas").innerHTML = document.getElementById("sintomas").innerHTML + ` <b>Sim, ${sintomas}</b>`
     }else{
         document.getElementById("sintomas").innerHTML = document.getElementById("sintomas").innerHTML + ` <b>Não.</b>`
     }
@@ -57,10 +61,14 @@ window.onload = async function() {
     }
     if(paciente.comorbidades.length > 0){
         let comorbidades = ""
-        paciente.comorbidades.forEach(comorbidade => {
-            comorbidades = comorbidades + `${comorbidade}, `
-        });
-        document.getElementById("comorbidades").innerHTML = document.getElementById("comorbidades").innerHTML + ` <b>Sim, ${comorbidades}.</b>`
+        for (let index = 0; index < paciente.comorbidades.length; index++) {
+            if(paciente.comorbidades.length - 1 === index) {
+                comorbidades = comorbidades + `${paciente.comorbidades[index]}.`
+            } else {
+                comorbidades = comorbidades + `${paciente.comorbidades[index]}, `
+            }
+        }
+        document.getElementById("comorbidades").innerHTML = document.getElementById("comorbidades").innerHTML + ` <b>Sim, ${comorbidades}</b>`
     }else{
         document.getElementById("comorbidades").innerHTML = document.getElementById("comorbidades").innerHTML + ` <b>Não.</b>`
     }
