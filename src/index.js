@@ -3,6 +3,7 @@ const path = require('path');
 const Alert = require("electron-alert");
 const Store = require('electron-store');
 const { Collection: MongoCollection, MongoClient } = require("mongodb");
+const mongodb = require("mongodb").MongoClient;
 const { Collection, Fields } = require("quickmongo");
 const {autoUpdater} = require('electron-updater');
 const cepAPI = require('cep-promise');
@@ -42,6 +43,7 @@ let normalWindow
 let windowPrimeiraDose
 let windowSegundaDose
 let windowconsulta
+let windowUsuarios
 let paciente
 let cpfProcura
 
@@ -63,7 +65,9 @@ const createWindow = () => {
   // and load the index.html of the app.
   normalWindow.setMenu(null);
   normalWindow.loadFile(path.join(__dirname, 'index.html'));
-
+  normalWindow.on('closed', () => {
+    app.quit()
+  });
   // Open the DevTools.
   //normalWindow.webContents.openDevTools();
 };
@@ -552,4 +556,67 @@ async function checkCEP(CEP){
 ipcMain.handle("checkCPF", async (event, CPF) => {
   let check = await isCpf(CPF)
   return check
+})
+
+function usuarios() {
+  windowUsuarios = new BrowserWindow({
+  width: 1600,
+  height: 900,
+  icon: __dirname + '/logo.ico',
+  webPreferences: {
+    nodeIntegration: true,
+    contextIsolation: false,
+   // preload:path.join(__dirname, 'dashboard.js')
+  }
+  })
+  windowUsuarios.on('closed', () => {
+    showMain(true);
+  });
+  windowUsuarios.setMenu(null);
+  windowUsuarios.webContents.openDevTools()
+  windowUsuarios.loadFile(path.join(__dirname, 'usuarios.html'))
+}
+
+ipcMain.handle("showUsuarios", (event, bool) => {
+  if (bool === true) {
+    usuarios()
+  } else {
+    windowUsuarios.hide()
+  }
+})
+
+async function pegarDb() {
+  let __procura
+  try {
+  mongo = new MongoClient(store.get("MongoURI"));
+  await mongo.connect().then(async () =>  {
+  __procura = pegarDB()
+  });
+  return __procura
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function pegarDB(){
+  const mongoCollection = mongo.db().collection("JSON");
+  const db = new Collection(mongoCollection, schema);
+  __obg = db.all()
+  return __obg
+}
+
+ipcMain.handle("getDB", async (event) => {
+  try {
+    __db = await pegarDb()
+    return __db
+  } catch (error) {
+    let swalOptions = {
+      position: "top-end",
+      title: "A mangoDB aparenta estar mal configurada, acesse a página de configurações para configurar a sua URI",
+      icon: "error",
+      showConfirmButton: true,
+      timer: 3000
+    };
+  Alert.fireToast(swalOptions);
+  }
 })

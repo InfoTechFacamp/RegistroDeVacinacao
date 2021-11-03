@@ -23,5 +23,10 @@ window.onload = function() {
         ipcRenderer.invoke("showPrimeiraDose", true)
         ipcRenderer.invoke("showMain", false)
     }
-
+    botaoListar = document.getElementById("botaolistar")
+    botaoListar.onclick = function() {
+        ipcRenderer.invoke("showUsuarios", true)
+        ipcRenderer.invoke("showMain", false)
+    }
+    
 }
