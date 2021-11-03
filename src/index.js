@@ -573,7 +573,7 @@ function usuarios() {
     showMain(true);
   });
   windowUsuarios.setMenu(null);
-  windowUsuarios.webContents.openDevTools()
+  //windowUsuarios.webContents.openDevTools()
   windowUsuarios.loadFile(path.join(__dirname, 'usuarios.html'))
 }
 
