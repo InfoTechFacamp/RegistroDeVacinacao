@@ -1,5 +1,4 @@
 const { ipcRenderer } = require('electron')
-require('WebDataRocks');
 const mongodb = require("mongodb").MongoClient;
 
 const { Parser } = require('json2csv');
@@ -44,39 +43,41 @@ getUsuarios().then(usuarios => {
   const json2csvParser = new Parser({ header: true });
   const csv = json2csvParser.parse(usuarios);
   const fs = require('fs');
-  fs.writeFile('./src/usuarios.csv', csv, function (err) {
+  fs.writeFile('./usuarios.csv', csv, function (err) {
     if (err) throw err;
     console.log('file saved');
   });
-  let pivot = new WebDataRocks({
-    container: "#wdr-component",
-    toolbar: true,
-    height: 850,
-    report: {
-      dataSource: {
-        filename: `${__dirname}\\usuarios.csv`,
-      },
-      "slice": {
-        "rows": [{
-          "uniqueName": "nome",
-          "filter": {
-            "members": [
-              "nome.CPF"
-            ]
-          }
-        }],
-        "columns": [{
-          "uniqueName": "CPF",
-        }],
-        "measures": [{
-          "uniqueName": "nome",
-          "aggregation": "sum",
-          "active": true
+  fs.realpath('./usuarios.csv', function (err, resolvedPath) {
+    let pivot = new WebDataRocks({
+      container: "#wdr-component",
+      toolbar: true,
+      height: 850,
+      report: {
+        dataSource: {
+          filename: resolvedPath,
         },
-        ]
-    },
-    
-      "localization": "https://cdn.webdatarocks.com/loc/pr.json"
-    }
+        "slice": {
+          "rows": [{
+            "uniqueName": "nome",
+            "filter": {
+              "members": [
+                "nome.CPF"
+              ]
+            }
+          }],
+          "columns": [{
+            "uniqueName": "CPF",
+          }],
+          "measures": [{
+            "uniqueName": "nome",
+            "aggregation": "sum",
+            "active": true
+          },
+          ]
+      },
+      
+        "localization": "https://cdn.webdatarocks.com/loc/pr.json"
+      }
+    })
   })
 })
