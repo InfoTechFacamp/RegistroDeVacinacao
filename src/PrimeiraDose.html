@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" style="background: linear-gradient(145deg, rgba(142,148,242,1) 33%, rgba(169,221,214,1) 69%);box-sizing: border-box;">
+<html lang="pt-br" style="box-sizing: border-box;background: #a8c8bb;">
 
 <head>
     <meta charset="utf-8">
@@ -65,10 +65,10 @@
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-12"><label class="form-check-label" for="formCheck-12">Teve contato com alguém que tem ou teve covid-19 comprovado em sua residência ou trabalho?</label></div>
                         </div>
                         <div class="espaco">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13" onclick="diadeinicio()"><label class="form-check-label" for="formCheck-13">Teve sintomas sugestivos de covid-19?</label></div><input class="form-control form-control-sm" data-bs-toggle="tooltip" data-bss-tooltip="" id="data" type="date" name="data-de-inicio" title="Data de início dos sintomas sugestidos de COVID-19" style="font-family: Allerta, sans-serif;">
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-13" onclick="diadeinicio()" title="Marque se o paciente teve algum sintoma sugestivo para a COVID-19"><label class="form-check-label" for="formCheck-13">Teve sintomas sugestivos de covid-19?</label></div><input class="form-control form-control-sm" data-bs-toggle="tooltip" data-bss-tooltip="" id="data" type="date" name="data-de-inicio" title="Data de início dos sintomas sugestidos de COVID-19" style="font-family: Allerta, sans-serif;">
                         </div>
                         <div class="espaco">
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14" onclick="enableTesterapido()"><label class="form-check-label" for="formCheck-14">Realizou algum teste para pesquisa de covid-19?</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-14" onclick="enableTesterapido()" title="Marque se o paciente realizou algum teste para covid 19"><label class="form-check-label" for="formCheck-14">Realizou algum teste para pesquisa de covid-19?</label></div>
                             <div id="testerapidodisplay"><select class="form-select form-select-sm" data-bs-toggle="tooltip" data-bss-tooltip="" id="teste-rapido" name="tipo-de-exame" title="Tipo de teste de COVID-19" style="font-family: Allerta, sans-serif;">
                                     <option value="RT-PCR">RT-PCR</option>
                                     <option value="POCT-PCR">POCT-PCR</option>
@@ -84,11 +84,11 @@
                         </div>
                         <div class="espaco">
                             <p>Comorbidades</p>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-15" value="HAS"><label class="form-check-label" for="formCheck-15">HAS</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-16" value="DM"><label class="form-check-label" for="formCheck-16">DM</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-17" value="ICC"><label class="form-check-label" for="formCheck-17">ICC</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18" value="IRC Dialítica"><label class="form-check-label" for="formCheck-18">IRC Dialítica</label></div>
-                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19" value="IRC não Dialítica"><label class="form-check-label" for="formCheck-19">IRC <strong>NÃO</strong>&nbsp; Dialítica</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-15" value="HAS" title="Hipertensão Arterial Sistêmica"><label class="form-check-label" for="formCheck-15">HAS</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-16" value="DM" title="Diabetes Mellitus"><label class="form-check-label" for="formCheck-16">DM</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-17" value="ICC" title="Insuficiência Cardíaca Congestiva"><label class="form-check-label" for="formCheck-17">ICC</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-18" value="IRC Dialítica" title="Insuficiência Renal Dialítica"><label class="form-check-label" for="formCheck-18">IRC Dialítica</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bss-tooltip="" id="formCheck-19" value="IRC não Dialítica" title="Insuficiência Renal não Dialítica"><label class="form-check-label" for="formCheck-19">IRC <strong>NÃO</strong>&nbsp; Dialítica</label></div>
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20" value="Pneumopatia"><label class="form-check-label" for="formCheck-20">PNEUMOPATIA</label></div>
                             <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21" value="Obesidade"><label class="form-check-label" for="formCheck-21">OBESIDADE</label></div><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="outra-comorbidade" name="outra-comorbidade" placeholder="Outro" title="Outra comorbidade não listada" style="font-family: Allerta, sans-serif;margin-bottom: 10px;" pattern="[A-Za-z]">
                         </div>

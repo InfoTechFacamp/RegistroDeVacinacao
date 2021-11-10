@@ -1,7 +1,7 @@
 {
   "name": "registrodevacinacao",
   "productName": "registrodevacinacao",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "O projeto de registro de vacinação tem como principal objetivo mapear e controlar as doses da vacina contra a COVID-19, anexando as informações necessárias em um banco de dados MongoDB.",
   "main": "src/index.js",
   "scripts": {

@@ -14,11 +14,11 @@
 </head>
 
 <body>
-    <div class="body" style="padding-top: 150px;">
+    <div class="body" style="padding-top: 150px;background: linear-gradient(145deg, #f2dbd5 33%, #e4c0c4 66%);">
         <div class="border rounded shadow login-center">
             <form style="padding-top: 32px;"><a class="btn btn-primary btn-sm" role="button" id="voltar" style="margin-left: 15%;" href="index.html">Voltar</a>
                 <div class="text-center form-group mb-3"><img class="img-fluid" style="width: 100px;" src="assets/img/default.png"></div>
-                <div class="d-flex justify-content-center form-group mb-3"><input class="form-control" type="text" id="cpf" style="width: 200px;" placeholder="CPF" pattern="[0-9]+" maxlength="11" minlength="11"></div>
+                <div class="d-flex justify-content-center form-group mb-3"><input class="form-control" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" id="cpf" style="width: 200px;" placeholder="CPF" pattern="[0-9]+" maxlength="11" minlength="11" title="Digite algum CPF para ser procurado na Database"></div>
                 <div class="d-flex justify-content-center form-group mb-3"><button class="btn btn-dark" id="consultar" style="width: 200px;" type="button">Consultar</button></div>
             </form>
         </div>
